@@ -1,0 +1,204 @@
+<section class="content4 advisorym5" group="List" mbr-class="{'mbr-fullscreen': fullScreen,
+        'mbr-parallax-background': bg.parallax}" plugins="mbr-switch-arrow, mobirise-icons">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="checkbox" title="Reverse" name="reverseContent">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <select title="Amount" name="cardAmount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+        </select>
+        <input type="color" title="Active Color" value="#d7d7d7" name="active" selected>
+        <input type="color" title="Icon Color" value="#1d1d1d" name="icon" selected>
+        <input type="checkbox" title="Border" name="showBorder" checked>
+        <input type="color" title="Border Color" value="#d7d7d7" name="border" condition="showBorder" selected>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row" mbr-class="{'flex-row-reverse' : reverseContent}">
+            <div class="col-12 col-lg-5">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2"
+                        data-app-selector=".mbr-section-title" mbr-if="showTitle">
+                        FAQ
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 card-wrap">
+                <div id="bootstrap-accordion" class="panel-group accordionStyles accordion" role="tablist"
+                     aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-core
+                               href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <h3 class="panel-title-edit mbr-fonts-style" mbr-theme-style="display-5"
+                                    data-app-selector=".panel-title-edit">
+                                    Nam neque perferendis quod?
+                                </h3>
+                                <span class="sign mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                            </a>
+                        </div>
+                        <div id="collapse1" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7"
+                                   data-app-selector=".panel-text">
+                                    Ipsum dolor sit amet, consectetur adipisicing elit. A, aut beatae blanditiis
+                                    dolor expedita fugit laboriosam molestiae molestias nam neque nesciunt placeat
+                                    quasi, repellat repellendus sapiente, sequi sint velit voluptatum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" mbr-if="cardAmount > 1">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-core
+                               href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <h3 class="panel-title-edit mbr-fonts-style" mbr-theme-style="display-5"
+                                    data-app-selector=".panel-title-edit">
+                                    Repellendus sapiente sequi?
+                                </h3>
+                                <span class="sign mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                            </a>
+                        </div>
+                        <div id="collapse2" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7"
+                                   data-app-selector=".panel-text">
+                                    A aliquam animi aspernatur
+                                    cum cumque dicta doloremque dolores doloribus dolorum error fugit laboriosam maxime
+                                    optio, provident quaerat sunt velit, vitae voluptatum!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" mbr-if="cardAmount > 2">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-core
+                               href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <h3 class="panel-title-edit mbr-fonts-style" mbr-theme-style="display-5"
+                                    data-app-selector=".panel-title-edit">
+                                    Quibusdam quidem repellat?
+                                </h3>
+                                <span class="sign mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                            </a>
+                        </div>
+                        <div id="collapse3" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7"
+                                   data-app-selector=".panel-text">
+                                    Architecto cum deserunt eaque fugiat, hic id illum ipsum libero minus molestias
+                                    pariatur quia quibusdam quidem repellat saepe sit. Oloremque dolores doloribus
+                                    dolorum error fugit laboriosam maxime optio, provident quaerat sunt velit,
+                                    vitae voluptatum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" mbr-if="cardAmount > 3">
+                        <div class="card-header" role="tab" id="headingFour">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-core
+                               href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <h3 class="panel-title-edit mbr-fonts-style" mbr-theme-style="display-5"
+                                    data-app-selector=".panel-title-edit">
+                                    Laborum necessitatibus obcaecati?
+                                </h3>
+                                <span class="sign mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                            </a>
+                        </div>
+                        <div id="collapse4" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7"
+                                   data-app-selector=".panel-text">
+                                    Amet, consectetur adipisicing elit. Cum esse excepturi illum,
+                                    minima modi perferendis quidem tempore voluptatum? Adipisci aperiam beatae debitis
+                                    enim in itaque laborum necessitatibus obcaecati perspiciatis unde.
+                                    Cum cumque dicta doloremque dolores doloribus dolorum error fugit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" mbr-if="cardAmount > 4">
+                        <div class="card-header" role="tab" id="headingFive">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-core
+                               href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <h3 class="panel-title-edit mbr-fonts-style" mbr-theme-style="display-5"
+                                    data-app-selector=".panel-title-edit">
+                                    Optio provident quaerat?
+                                </h3>
+                                <span class="sign mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                            </a>
+                        </div>
+                        <div id="collapse5" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7"
+                                   data-app-selector=".panel-text">
+                                    Culpa cupiditate doloremque, dolorum eaque incidunt iste modi molestias natus odio
+                                    officia officiis quia quos sed tempora tempore velit? dolorum error fugit laboriosam
+                                    maxime optio, provident quaerat sunt velit, vitae voluptatum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" mbr-if="cardAmount > 5">
+                        <div class="card-header" role="tab" id="headingSix">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-core
+                               href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <h3 class="panel-title-edit mbr-fonts-style" mbr-theme-style="display-5"
+                                    data-app-selector=".panel-title-edit">
+                                    Ipsam laborum magnam minus?
+                                </h3>
+                                <span class="sign mobi-mbri mobi-mbri-arrow-next mbr-iconfont"></span>
+                            </a>
+                        </div>
+                        <div id="collapse6" class="panel-collapse noScroll collapse" role="tabpanel"
+                             aria-labelledby="headingSix" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text" mbr-theme-style="display-7"
+                                   data-app-selector=".panel-text">
+                                    Quod sunt totam. Omnis pariatur, suscipit. Soluta. Ad est eum fugiat vel
+                                    voluptate. Amet eaque eius error ipsa, ipsam laborum magnam minus molestiae nihil,
+                                    nostrum officiis pariatur quae quis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.subtitle-wrapper {
+    .mbr-section-subtitle {
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.title-wrapper {
+    .mbr-section-title {
+        margin-bottom: 0;
+    }
+
+    .mbr-section-btn {
+        margin-top: 64px;
+
+        @media (max-width: 992px) {
+            margin-top: 50px;
+        }
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.mbr-section-subtitle {
+    color: #1d1d1d;
+}
+
+
+

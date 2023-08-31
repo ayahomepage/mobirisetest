@@ -1,0 +1,135 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    justify-content: center;
+}
+
+.title-wrapper {
+    .mbr-section-title {
+        margin-bottom: 64px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.item {
+    margin-bottom: 64px;
+
+    @media (max-width: 992px) {
+        margin-bottom: 50px;
+    }
+
+    a {
+        display: block;
+        height: 100%;
+
+        &:hover {
+            .item-wrapper {
+                border-color: @active;
+
+                .item-img img {
+                    transform: scale(1.06);
+                }
+            }
+        }
+
+        .item-wrapper {
+            padding: 32px;
+            border: 2px solid @border;
+            height: 100%;
+            transition: all .3s ease-out;
+
+            .item-img {
+                margin-bottom: 32px;
+                overflow: hidden;
+
+                img {
+                    height: 350px;
+                    object-fit: cover;
+                    transition: all .3s ease-out;
+
+                    @media (max-width: 992px) {
+                        height: 250px;
+                    }
+                }
+            }
+
+            .item-content {
+                .mbr-card-title {
+                    margin-bottom: 16px;
+                }
+
+                .mbr-text {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.mbr-card-title {
+    color: #1d1d1d;
+}
+
+.mbr-text {
+    color: #1d1d1d;
+}
+
+
+
+

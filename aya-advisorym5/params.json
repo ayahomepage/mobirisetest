@@ -1,0 +1,427 @@
+{
+    "description": "AdvisoryM5 is a theme for a accounting firm, financial centers, agency, law firms, consults, finance trade, accounting information technology, financial advisors, chartered accounting agency, business consulting, private finance blog, freelancer consulting, finance consulting firm.<a href=\"https://mobirise.com/extensions/advisorym5/\">View demo...</a>",
+    "minAppVersion": "5.3.14",
+    "version": 0.1,
+    "title": "aya-advisoryM5",
+    "name": "aya-advisoryM5",
+    "largeCover": "cover.jpg",
+    "logo": "thumbnail.png",
+    "appScript": true,
+    "coreDependencies": [
+        "fonts/style.css"
+    ],
+    "includes": [
+        "core-summernote-dropdown-menu-bs-5",
+        "arrow-down",
+        "core-accordion-bootstrap",
+        "core-toggle-bootstrap",
+        "dropdown",
+        "gallery-video",
+        "scroll-to-top",
+        "scroll-animation",
+        "core-after-navbar",
+        "core-auto-paddings",
+        "menu-styles",
+        "core-menu-styles",
+        "gallery",
+        "core-gallery",
+        "testimonials",
+        "core-testimonials",
+        "slider-mobirise",
+        "core-slider-mobirise",
+        "core-dropdown",
+        "item-wizard"
+    ],
+    "theme": {
+        "customLESS": "plugins/theme/css/custom.less",
+        "buttonColors": {
+            "btn-white": "#fff",
+            "btn-secondary": "@secondaryColor",
+            "btn-warning": "@warningColor",
+            "btn-black": "#000",
+            "btn-primary": "@primaryColor",
+            "btn-info": "@infoColor",
+            "btn-success": "@successColor",
+            "btn-danger": "@dangerColor"
+        },
+        "colorsSet": [
+            "#FCFBF5",
+            "#FFF8EE",
+            "#D3D4D4",
+            "#D9D9DA",
+            "#B9C7C2",
+            "#353535",
+            "#ffffff",
+            "#D3D1C5",
+            "#F7E8D2",
+            "#9BA09F",
+            "#A9A8AC",
+            "#8CA49C",
+            "#232323",
+            "#d7d7d7",
+            "#B1AD97",
+            "#D3BE9C",
+            "#7D8684",
+            "#8A8790",
+            "#688D81",
+            "#1d1d1d",
+            "#989898",
+            "#9C9882",
+            "#B3976B",
+            "#60706D",
+            "#6E6979",
+            "#487766",
+            "#000000",
+            "#706f6d"
+        ],
+        "settings": [
+            {
+                "type": "title",
+                "title": "Site Styles"
+            },
+            {
+                "type": "subtitle",
+                "title": "Colors"
+            },
+            {
+                "var": "primaryColor",
+                "groupName": "colors",
+                "default": "#1d1d1d",
+                "type": "color",
+                "title": "Primary"
+            },
+            {
+                "groupName": "colors",
+                "set": [
+                    {
+                        "var": "secondaryColor",
+                        "default": "#fcfbf5"
+                    },
+                    {
+                        "var": "successColor",
+                        "default": "#d7d7d7"
+                    },
+                    {
+                        "var": "infoColor",
+                        "default": "#ffffff"
+                    },
+                    {
+                        "var": "warningColor",
+                        "default": "#F7E8D2"
+                    },
+                    {
+                        "var": "dangerColor",
+                        "default": "#6E6979"
+                    }
+                ],
+                "type": "colors",
+                "title": "Buttons and Links"
+            },
+            {
+                "type": "subtitle",
+                "title": "Fonts"
+            },
+            {
+                "var": "mainFont",
+                "default": "Inter Tight"
+            },
+            {
+                "set": [
+                    {
+                        "var": "display1Font",
+                        "default": "Inter Tight",
+                        "type": "font"
+                    },
+                    {
+                        "min": 0.4,
+                        "default": 3.16,
+                        "max": 12,
+                        "step": 0.2,
+                        "var": "display1Size",
+                        "type": "range"
+                    }
+                ],
+                "type": "group",
+                "name": "display-1",
+                "rule": ".mbr-fonts-style, [mbr-buttons], [mbr-menu]",
+                "title": "Title 1"
+            },
+            {
+                "set": [
+                    {
+                        "var": "display2Font",
+                        "default": "Inter Tight",
+                        "type": "font"
+                    },
+                    {
+                        "min": 0.4,
+                        "default": 2.37,
+                        "max": 6,
+                        "step": 0.2,
+                        "var": "display2Size",
+                        "type": "range"
+                    }
+                ],
+                "type": "group",
+                "name": "display-2",
+                "rule": ".mbr-fonts-style, [mbr-buttons], [mbr-menu]",
+                "title": "Title 2"
+            },
+            {
+                "set": [
+                    {
+                        "var": "display5Font",
+                        "default": "Inter Tight",
+                        "type": "font"
+                    },
+                    {
+                        "min": 0.4,
+                        "default": 1.77,
+                        "max": 2.5,
+                        "step": 0.2,
+                        "var": "display5Size",
+                        "type": "range"
+                    }
+                ],
+                "type": "group",
+                "name": "display-5",
+                "rule": ".mbr-fonts-style, [mbr-buttons], [mbr-menu]",
+                "title": "Title 3"
+            },
+            {
+                "set": [
+                    {
+                        "var": "display7Font",
+                        "default": "Inter Tight",
+                        "type": "font"
+                    },
+                    {
+                        "min": 0.4,
+                        "default": 1.33,
+                        "max": 2,
+                        "step": 0.2,
+                        "var": "display7Size",
+                        "type": "range"
+                    }
+                ],
+                "type": "group",
+                "name": "display-7",
+                "rule": ".mbr-fonts-style, [mbr-buttons], [mbr-menu]",
+                "title": "Text"
+            },
+            {
+                "set": [
+                    {
+                        "var": "display4Font",
+                        "default": "Inter Tight",
+                        "type": "font"
+                    },
+                    {
+                        "min": 0.4,
+                        "default": 1,
+                        "max": 2,
+                        "step": 0.2,
+                        "var": "display4Size",
+                        "type": "range"
+                    }
+                ],
+                "type": "group",
+                "name": "display-4",
+                "rule": ".mbr-fonts-style, [mbr-buttons], [mbr-menu]",
+                "title": "Menu"
+            },
+            {
+                "type": "subtitle",
+                "title": "Options"
+            },
+            {
+                "var": "isRoundedButtons",
+                "default": false,
+                "type": "switch",
+                "title": "Rounded Buttons"
+            },
+            {
+                "var": "isGhostButtonBorder",
+                "default": false,
+                "type": "switch",
+                "title": "Ghost Button Border"
+            },
+            {
+                "var": "underlinedLinks",
+                "default": false,
+                "type": "switch",
+                "title": "Underlined Links"
+            },
+            {
+                "var": "isAnimatedOnScroll",
+                "default": false,
+                "type": "switch",
+                "title": "Animation on Scroll"
+            },
+            {
+                "var": "isScrollToTopButton",
+                "default": false,
+                "type": "switch",
+                "title": "Scroll to Top Button"
+            }
+        ],
+        "fonts": [
+            {
+                "url": "https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,700;1,400&display=swap",
+                "name": "Inter Tight",
+                "css": "'Inter Tight', sans-serif"
+            }
+        ],
+        "linkColors": {
+            "text-white": "#fff",
+            "text-black": "#000",
+            "text-primary": "@primaryColor",
+            "text-secondary": "@secondaryColor",
+            "text-info": "@infoColor",
+            "text-danger": "@dangerColor",
+            "text-warning": "@warningColor",
+            "text-success": "@successColor"
+        },
+        "base": {
+            "version": 5,
+            "name": "bootstrap"
+        },
+        "hasButtonOutlineColors": true,
+        "type": "secondary"
+    },
+    "components": [
+        {
+            "_group": "AYA",
+            "path": "components/aya-wave1"
+        },
+        {
+            "_group": "AYA",
+            "path": "components/aya-form1"
+        },
+        {
+            "_once": "menu",
+            "_group": "Menu",
+            "path": "components/menu1"
+        },
+        {
+            "path": "components/header1",
+            "_group": "Header"
+        },
+        {
+            "path": "components/header2",
+            "_group": "Header"
+        },
+        {
+            "path": "components/features1",
+            "_group": "Features"
+        },
+        {
+            "path": "components/features2",
+            "_group": "Features"
+        },
+        {
+            "path": "components/features3",
+            "_group": "Features"
+        },
+        {
+            "path": "components/features4",
+            "_group": "Features"
+        },
+        {
+            "path": "components/features5",
+            "_group": "Features"
+        },
+        {
+            "path": "components/features6",
+            "_group": "Features"
+        },
+        {
+            "path": "components/features7",
+            "_group": "Features"
+        },
+        {
+            "path": "components/content1",
+            "_group": "Article"
+        },
+        {
+            "path": "components/content2",
+            "_group": "Article"
+        },
+        {
+            "path": "components/content3",
+            "_group": "Article"
+        },
+        {
+            "path": "components/content5",
+            "_group": "Article"
+        },
+        {
+            "path": "components/content6",
+            "_group": "Article"
+        },
+        {
+            "path": "components/content7",
+            "_group": "Article"
+        },
+        {
+            "path": "components/image1",
+            "_group": "Image & Video"
+        },
+        {
+            "path": "components/video1",
+            "_group": "Image & Video"
+        },
+        {
+            "path": "components/gallery1",
+            "_group": "Gallery & Slider"
+        },
+        {
+            "path": "components/gallery2",
+            "_group": "Gallery & Slider"
+        },
+        {
+            "path": "components/gallery3",
+            "_group": "Gallery & Slider"
+        },
+        {
+            "path": "components/slider1",
+            "_group": "Gallery & Slider"
+        },
+        {
+            "path": "components/slider2",
+            "_group": "Gallery & Slider"
+        },
+        {
+            "path": "components/slider3",
+            "_group": "Gallery & Slider"
+        },
+        {
+            "path": "components/map1",
+            "_group": "Contact"
+        },
+        {
+            "_once": "footers",
+            "_group": "Footer",
+            "path": "components/footer1"
+        },
+        {
+            "path": "components/form1",
+            "_group": "Form"
+        },
+        {
+            "path": "components/content4",
+            "_group": "List"
+        },
+        {
+            "path": "components/tabs1",
+            "_group": "List"
+        },
+        {
+            "path": "components/pricing1",
+            "_group": "Pricing"
+        }
+    ],
+    "plugins": [
+        "plugins"
+    ]
+}

@@ -1,0 +1,118 @@
+<section class="features3 advisorym5" group="Features" mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <header>Cards</header>
+        <select title="Amount" name="cards">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+        </select>
+        <input type="checkbox" title="Icon" name="showIcon" checked>
+        <input type="color" title="Icon Color" value="#1d1d1d" name="icon" condition="showIcon" selected>
+        <input type="checkbox" title="Card Title" name="showCardTitle" checked>
+        <input type="checkbox" title="Card Text" name="showText" checked>
+        <input type="color" title="Border Color" value="#d7d7d7" name="border" selected>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle"
+                        data-app-selector=".mbr-section-title, .mbr-section-btn">
+                        Consectetur adipisicing elit. Ad deleniti distinctio <br> eius, eum
+                        eveniet facilis, maiores non quia quo quod.
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card">
+                <div class="card-wrapper">
+                    <div class="icon-wrapper" mbr-if="showIcon">
+                        <span mbr-icon class="mbr-iconfont mobi-mbri-unlock mobi-mbri" mbr-if="showIcon"></span>
+                    </div>
+                    <h3 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle"
+                        data-app-selector=".mbr-card-title, .icon-wrapper">
+                        Maiores non <br> quia quo quod
+                    </h3>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText"
+                       data-app-selector=".mbr-text">
+                        Consectetur adipisicing elit. Consectetur deserunt distinctio eligendi esse est eum explicabo
+                        facere incidunt laborum nostrum obcaecati, odit officia, qui quidem repellat repudiandae soluta
+                        vel voluptate.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card" mbr-if="cards > 1">
+                <div class="card-wrapper">
+                    <div class="icon-wrapper" mbr-if="showIcon">
+                        <span mbr-icon class="mbr-iconfont mobi-mbri-sites mobi-mbri" mbr-if="showIcon"></span>
+                    </div>
+                    <h3 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle"
+                        data-app-selector=".mbr-card-title, .icon-wrapper">
+                        Dolore eius <br> illum optio
+                    </h3>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText"
+                       data-app-selector=".mbr-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt distinctio
+                        eligendi esse est eum explicabo facere incidunt laborum nostrum obcaecati, odit officia, qui
+                        quidem repellat repudiandae soluta vel.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card" mbr-if="cards > 2">
+                <div class="card-wrapper">
+                    <div class="icon-wrapper" mbr-if="showIcon">
+                        <span mbr-icon class="mbr-iconfont mobi-mbri-layers mobi-mbri" mbr-if="showIcon"></span>
+                    </div>
+                    <h3 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showTitle"
+                        data-app-selector=".mbr-card-title, .icon-wrapper">
+                        Consequuntur <br> delectus eligendi
+                    </h3>
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText"
+                       data-app-selector=".mbr-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur deserunt distinctio
+                        eligendi esse est eum explicabo facere incidunt laborum nostrum obcaecati, odit officia, qui
+                        quidem.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons">
+                    <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">
+                        <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

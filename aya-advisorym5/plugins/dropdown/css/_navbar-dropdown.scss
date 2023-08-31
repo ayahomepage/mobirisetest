@@ -1,0 +1,193 @@
+
+.navbar-dropdown {
+
+    left: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.45s ease;
+    z-index: 1030;
+    background: #282828;
+
+    //
+    // Brand
+    //
+    // .navbar-brand {
+
+    //     float: none;
+    //     font-size: 0;
+    //     padding: $navbar-brand-padding-x 0;
+    //     position: relative;
+    //     transition: padding 0.25s ease;
+    //     white-space: nowrap;
+    //     color: #f3c649;
+
+    //     &::before {
+    //         content: "";
+    //         display: inline-block;
+    //         height: 100%;
+    //         vertical-align: middle;
+    //     }
+
+    // }
+
+    // .navbar-logo,
+    // .navbar-caption {
+    //     display: inline-block;
+    //     vertical-align: middle;
+    // }
+
+    .navbar-logo {
+
+        margin-right: $navbar-logo-margin;
+        transition: margin 0.3s ease-in-out;
+        vertical-align: middle;
+
+        img {
+            height: $navbar-logo-height;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.mbr-iconfont {
+            font-size: $navbar-logo-height;
+            line-height: $navbar-logo-height;
+        }
+
+    }
+
+    // .mbr-table-cell {
+    //     height: $navbar-logo-height + $navbar-brand-padding-x * 2;
+    // }
+
+    .navbar-caption {
+
+        font-weight: 700;
+        white-space: normal;
+        vertical-align: -4px;
+        line-height: $navbar-logo-height !important;
+
+        &, &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+
+    }
+    
+    .mbr-iconfont+.navbar-caption {
+        vertical-align: -1px;
+    }
+
+
+    // fixed
+    &.navbar-fixed-top {
+        position: fixed;
+    }
+
+    .navbar-brand span {
+        vertical-align: -4px;
+    }
+
+    // transparent
+    &.bg-color.transparent {
+        background: none;
+    }
+
+    // short
+    &.navbar-short {
+
+        .navbar-brand {
+            padding: $navbar-short-brand-padding-x 0;
+
+            span {
+                vertical-align: -1px;
+            }
+        }
+        .navbar-caption {
+            line-height: $navbar-short-logo-height  !important;
+            vertical-align: -2px;
+        }
+
+        .navbar-logo {
+
+            margin-right: $navbar-short-logo-margin;
+
+            img {
+                height: $navbar-short-logo-height;
+            }
+
+            &.mbr-iconfont {
+                font-size: $navbar-short-logo-height;
+                line-height: $navbar-short-logo-height;
+            }
+
+        }
+
+        .mbr-table-cell {
+            height: $navbar-short-logo-height + $navbar-short-brand-padding-x * 2;
+        }
+
+    }
+
+    // close
+    .navbar-close {
+        left: 0.6875rem;
+        position: fixed;
+        top: 0.75rem;
+        z-index: 1000;
+    }
+
+    .hamburger-icon {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        -webkit-box-shadow: 0 -6px 0 1px #282828,0 0 0 1px #282828,0 6px 0 1px #282828;
+        -moz-box-shadow: 0 -6px 0 1px #282828,0 0 0 1px #282828,0 6px 0 1px #282828;
+        box-shadow: 0 -6px 0 1px #282828,0 0 0 1px #282828,0 6px 0 1px #282828;
+    }
+
+    // .close-icon {
+    //     position: relative;
+    //     width: 21px;
+    //     height: 21px;
+    //     overflow: hidden;
+
+    //     &::before, &::after {
+    //         content: '';
+    //         position: absolute;
+    //         height: 2px;
+    //         width: 100%;
+    //         top: 50%;
+    //         left: 0;
+    //         margin-top: -1px;
+    //         background: #f3c649;
+    //     }
+
+    //     &::before {
+    //         transform: rotate(45deg);
+    //         -ms-transform: rotate(45deg);
+    //         -webkit-transform: rotate(45deg);
+    //     }
+
+    //     &::after {
+    //         transform: rotate(-45deg);
+    //         -ms-transform: rotate(-45deg);
+    //         -webkit-transform: rotate(-45deg);
+    //     }
+
+    // }
+
+}
+
+// .is-builder {
+//     .navbar-logo {
+//         font-size: $navbar-logo-height;
+//         line-height: $navbar-logo-height;
+        
+//         &.mbr-iconfont {
+//             font-size: $navbar-logo-height;
+//             line-height: $navbar-logo-height;
+//         }
+//     }
+// }

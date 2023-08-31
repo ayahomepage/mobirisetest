@@ -1,0 +1,151 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.title-wrapper {
+    .mbr-section-title {
+        margin-bottom: 0;
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.card-wrap {
+    .panel-group {
+        padding: 64px;
+        border-radius: 0;
+
+        & when (@showBorder) {
+            border: 2px solid @border;
+        }
+
+        @media (max-width: 992px) {
+            padding: 50px 20px;
+        }
+
+        .card {
+
+            & when (@showBorder) {
+                border-bottom: 1px solid @border;
+            }
+
+            border-radius: 0;
+
+            .card-header {
+                background-color: transparent;
+                border-bottom: none;
+                padding: 20px 0;
+
+                @media (max-width: 768px) {
+                    padding: 15px 0;
+                }
+
+                .panel-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &:not(.collapsed) {
+                        .mbr-iconfont {
+                            transform: rotate(90deg);
+                            background-color: @active;
+                        }
+                    }
+
+                    &:hover, &:focus {
+                        .mbr-iconfont {
+                            background-color: @active;
+                        }
+                    }
+
+                    .panel-title-edit {
+                        margin: 0;
+                    }
+
+                    .mbr-iconfont {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 32px;
+                        max-width: 32px;
+                        height: 32px;
+                        border-radius: 100%;
+                        font-size: 16px;
+                        color: @icon;
+                        transition: all .3s ease-in-out;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .panel-collapse {
+                .panel-body {
+                    .panel-text {
+                        margin-bottom: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.panel-title-edit {
+    color: #1d1d1d;
+}
+
+.panel-text {
+    color: #1d1d1d;
+}

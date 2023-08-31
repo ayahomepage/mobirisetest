@@ -1,0 +1,227 @@
+& {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ="color") {
+    background: @bg-value;
+}
+
+& when (@bg-type ="image") {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.mbr-section-title {
+    margin-bottom: 64px;
+
+    @media (max-width: 992px) {
+        margin-bottom: 50px;
+    }
+}
+
+.embla__slide {
+    display: flex;
+    justify-content: center;
+}
+
+.embla__button--next,
+.embla__button--prev {
+    display: flex;
+}
+
+.embla__button {
+    top: -2rem;
+    width: 30px;
+    height: 30px;
+    margin-top: -1.5rem;
+    font-size: 16px;
+    background-color: transparent;
+    color: @primaryColor;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & when not (@arrows) {
+        display: none;
+    }
+
+    & when not (@arrowsMobile) {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &:disabled {
+        cursor: default;
+        display: none;
+    }
+
+    &:hover {
+        background: transparent;
+        color: @primaryColor;
+        opacity: .7;
+    }
+
+    &.embla__button--prev {
+        left: auto;
+        right: 2rem;
+        margin-left: 0;
+    }
+
+    &.embla__button--next {
+        right: 0;
+        margin-right: 0;
+    }
+
+    @media (max-width: 767px) {
+        top: -1.5rem;
+    }
+}
+
+.embla {
+    position: relative;
+    width: 100%;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__viewport.is-draggable {
+    cursor: move;
+    cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+    cursor: grabbing;
+}
+
+.embla__container {
+    display: flex;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.embla__slide {
+    position: relative;
+    min-width: 360px;
+    max-width: 360px;
+
+    @media (max-width: 768px) {
+        min-width: 100%;
+        max-width: initial;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+
+    .card-wrap {
+        .item-wrapper {
+            margin-bottom: 16px;
+
+            .image-wrap {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 420px;
+                    object-fit: cover;
+
+                    @media (max-width: 992px) {
+                        height: 280px;
+                    }
+                }
+            }
+        }
+
+        .content-wrap {
+            .mbr-name {
+                margin-bottom: 16px;
+            }
+
+            .mbr-role {
+                margin-bottom: 16px;
+            }
+
+            .soc-wrapper {
+                .soc-wrap {
+                    display: inline-flex;
+
+                    .mbr-iconfont {
+                        margin-right: 16px;
+                        width: 32px;
+                        height: 32px;
+                        font-size: 16px;
+                        color: @icon;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid @icon;
+                        border-radius: 100%;
+                        transition: all .3s ease-out;
+
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.mbr-name {
+    color: #1d1d1d;
+}
+
+.mbr-role {
+    color: #1d1d1d;
+}

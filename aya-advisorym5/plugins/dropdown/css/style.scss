@@ -1,0 +1,30 @@
+
+//
+// Dropdown menu
+//
+
+// Import from Bootstrap 4
+
+@import "../../bootstrap/scss/_variables.scss";
+@import "../../bootstrap/scss/_mixins.scss";
+
+
+// Variables
+
+$navbar-logo-height: 3.125rem !default;
+$navbar-logo-margin: 0.8rem !default;
+$navbar-brand-padding-x: 1.25rem !default;
+
+$navbar-short-logo-height: 2.375rem !default;
+$navbar-short-logo-margin: 0.5rem !default;
+$navbar-short-brand-padding-x: 0.625rem !default;
+
+$nav-dropdown-pointer-margin-left: .3rem !default;
+$nav-dropdown-pointer-size: .35em !default;
+
+@import "navbar-dropdown";
+@import "nav-dropdown";
+
+.is-builder .nav-dropdown.collapsing {
+    transition: none !important;
+}

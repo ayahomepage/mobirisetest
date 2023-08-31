@@ -1,0 +1,201 @@
+<section class="features4 advisorym5" group="Features" mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <header>Cards</header>
+        <select title="Count" name="bootstrapTabs">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+        </select>
+        <input type="checkbox" title="Logo" name="showLogo" checked>
+        <input type="checkbox" title="Brand Name" name="showBrand" checked>
+        <input type="checkbox" title="Card Subtitle" name="showSubtitle" checked>
+        <input type="checkbox" title="Card Date" name="showDate" checked>
+        <input type="color" title="Title BG" value="#989898" name="title" condition="showSubtitle || showDate"
+               selected>
+        <input type="checkbox" title="Card Title" name="showCardTitle" checked>
+        <input type="checkbox" title="Card Text" name="showText" checked>
+        <input type="checkbox" title="Card Tag" name="showTag" checked>
+        <input type="color" title="Tag BG" value="#d7d7d7" name="tag" condition="showTag" selected>
+        <input type="checkbox" title="Card Country" name="showCountry" checked>
+        <input type="color" title="Border Color" value="#d7d7d7" name="border" selected>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle"
+                        data-app-selector=".mbr-section-title, .mbr-section-btn">
+                        Our partners
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card">
+                <div class="card-wrapper">
+                    <div class="logo-wrapper" mbr-if="showBrand || showLogo">
+                        <div class="logo-wrap">
+                            <img src="../_images/logo.png" alt="Mobirise" mbr-if="showLogo">
+                            <p class="mbr-brand mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showBrand"
+                               data-app-selector=".mbr-brand, .logo-wrapper">
+                                Maiores
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-title-wrapper" mbr-if="showSubtitle || showDate">
+                        <h4 class="mbr-card-subtitle mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle"
+                            data-app-selector=".mbr-card-subtitle">
+                            Maiores non quia quo
+                        </h4>
+                        <p class="mbr-date mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showDate"
+                           data-app-selector=".mbr-date">
+                            Dec 2030
+                        </p>
+                    </div>
+                    <div class="text-wrapper" mbr-if="showCardTitle || showText">
+                        <h3 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showCardTitle"
+                            data-app-selector=".mbr-card-title">
+                            Amet
+                        </h3>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText"
+                           data-app-selector=".mbr-text">
+                            Repellat saepe unde ut veritatis
+                        </p>
+                    </div>
+                    <div class="tag-wrapper" mbr-if="showTag || showCountry">
+                        <p class="mbr-tag mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTag"
+                           data-app-selector=".mbr-tag">
+                            Saepe unde veritatis
+                        </p>
+                        <p class="mbr-country mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showCountry"
+                           data-app-selector=".mbr-country">
+                            🇺🇸
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card">
+                <div class="card-wrapper">
+                    <div class="logo-wrapper" mbr-if="showBrand || showLogo">
+                        <div class="logo-wrap">
+                            <img src="../_images/logo.png" alt="Mobirise" mbr-if="showLogo">
+                            <p class="mbr-brand mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showBrand"
+                               data-app-selector=".mbr-brand, .logo-wrapper">
+                                Aspernatur
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-title-wrapper" mbr-if="showSubtitle || showDate">
+                        <h4 class="mbr-card-subtitle mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle"
+                            data-app-selector=".mbr-card-subtitle">
+                            Aperiam asperiores molestias
+                        </h4>
+                        <p class="mbr-date mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showDate"
+                           data-app-selector=".mbr-date">
+                            Nov 2030
+                        </p>
+                    </div>
+                    <div class="text-wrapper" mbr-if="showCardTitle || showText">
+                        <h3 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showCardTitle"
+                            data-app-selector=".mbr-card-title">
+                            Veritatis
+                        </h3>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText"
+                           data-app-selector=".mbr-text">
+                            Perferendis reiciendis tempora animi
+                    </div>
+                    <div class="tag-wrapper" mbr-if="showTag || showCountry">
+                        <p class="mbr-tag mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTag"
+                           data-app-selector=".mbr-tag">
+                            Aspernatur
+                        </p>
+                        <p class="mbr-country mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showCountry"
+                           data-app-selector=".mbr-country">
+                            🇬🇧
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 card">
+                <div class="card-wrapper">
+                    <div class="logo-wrapper" mbr-if="showBrand || showLogo">
+                        <div class="logo-wrap">
+                            <img src="../_images/logo.png" alt="Mobirise" mbr-if="showLogo">
+                            <p class="mbr-brand mbr-fonts-style" mbr-theme-style="display-5" mbr-if="showBrand"
+                               data-app-selector=".mbr-brand, .logo-wrapper">
+                                Commodi
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-title-wrapper" mbr-if="showSubtitle || showDate">
+                        <h4 class="mbr-card-subtitle mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showSubtitle"
+                            data-app-selector=".mbr-card-subtitle">
+                            Quasi dolore maiores
+                        </h4>
+                        <p class="mbr-date mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showDate"
+                           data-app-selector=".mbr-date">
+                            Sep 2030
+                        </p>
+                    </div>
+                    <div class="text-wrapper" mbr-if="showCardTitle || showText">
+                        <h3 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showCardTitle"
+                            data-app-selector=".mbr-card-title">
+                            Saepe
+                        </h3>
+                        <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showText"
+                           data-app-selector=".mbr-text">
+                            Repellendus tempora inventore nostrum
+                        </p>
+                    </div>
+                    <div class="tag-wrapper" mbr-if="showTag || showCountry">
+                        <p class="mbr-tag mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTag"
+                           data-app-selector=".mbr-tag">
+                            Saepe unde veritatis
+                        </p>
+                        <p class="mbr-country mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showCountry"
+                           data-app-selector=".mbr-country">
+                            🇩🇪
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons">
+                    <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">
+                        <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

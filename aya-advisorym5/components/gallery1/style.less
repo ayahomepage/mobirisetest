@@ -1,0 +1,175 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& {
+    overflow: hidden;
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+    display: none;
+}
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 16px;
+
+        @media (max-width: 992px) {
+            padding: 0 12px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    min-height: 730px;
+
+    & when (@showBorder) {
+        border-top: 2px solid @border;
+        border-bottom: 2px solid @border;
+        margin-top: -2px;
+    }
+
+    @media (max-width: 992px) {
+        min-height: 350px;
+    }
+}
+
+.card {
+    padding: 0;
+}
+
+.decor-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .decor-circle_1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        border-radius: 100%;
+        & when (@showBorder) {
+            border: 2px solid @border;
+        }
+        overflow: hidden;
+
+        @media (max-width: 992px) {
+            position: static;
+            margin: 0 auto 34px;
+        }
+    }
+
+    .decor-circle_2 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        & when (@showBorder) {
+            border: 2px solid @border;
+        }
+        overflow: hidden;
+
+        @media (max-width: 992px) {
+            position: static;
+            margin: 0 auto 34px;
+        }
+    }
+
+    .decor-circle_3 {
+        position: absolute;
+        bottom: 0;
+        left: 36%;
+        width: 400px;
+        height: 400px;
+        border-top-left-radius: 100%;
+        & when (@showBorder) {
+            border: 2px solid @border;
+            border-bottom: none;
+        }
+        overflow: hidden;
+
+        @media (max-width: 992px) {
+            position: static;
+            margin: 0 auto 34px;
+        }
+    }
+
+    .decor-square_1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        & when (@showBorder) {
+            border: 2px solid @border;
+        }
+        border-top: none;
+        overflow: hidden;
+
+        @media (max-width: 992px) {
+            position: static;
+            margin: 0 auto 34px;
+        }
+    }
+
+    .decor-square_2 {
+        position: absolute;
+        bottom: 0;
+        right: 200px;
+        width: 200px;
+        height: 200px;
+        & when (@showBorder) {
+            border: 2px solid @border;
+        }
+        border-bottom: none;
+        overflow: hidden;
+
+        @media (max-width: 992px) {
+            position: static;
+            margin: 0 auto 34px;
+        }
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+

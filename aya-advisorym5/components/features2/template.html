@@ -1,0 +1,132 @@
+<section class="features2 advisorym5" group="Features" mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="checkbox" title="Reverse" name="reverseContent">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Buttons" name="showButtons" checked>
+        <input type="checkbox" title="Border" name="showBorder" checked>
+        <input type="color" title="Border Color" value="#d7d7d7" name="border" selected>
+        <header>Cards</header>
+        <input type="checkbox" title="Icon" name="showIcon" checked>
+        <input type="color" title="Icon Color" value="#1d1d1d" name="iconColor" condition="showIcon" selected>
+        <input type="color" title="Icon BG" value="#ffffff" name="iconBg" condition="showIcon" selected>
+        <input type="checkbox" title="Card Title" name="showCardTitle" checked>
+        <input type="checkbox" title="Card Description" name="showDesc" checked>
+        <input type="checkbox" title="Card Text" name="showText" checked>
+        <input type="checkbox" title="Card Location" name="showLoc" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row" mbr-class="{'flex-row-reverse' : reverseContent}">
+            <div class="col-12 col-lg-4">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2" mbr-if="showTitle"
+                        data-app-selector=".mbr-section-title, .mbr-section-btn">
+                        About our <br> business tasks
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="row cards">
+                    <div class="item features-image col-12 col-lg-6">
+                        <div class="item-wrapper">
+                            <a href="#">
+                                <div class="item-img">
+                                    <img src="../_images/advisory/image6.jpg" alt="Mobirise Website Builder">
+                                    <span mbr-icon class="mbr-iconfont mobi-mbri-play mobi-mbri" mbr-if="showIcon"></span>
+                                </div>
+                            </a>
+                            <div class="item-content">
+                                <div class="item-title">
+                                    <div class="item-title-wrap">
+                                        <h4 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-7"
+                                            data-app-selector=".mbr-card-title, .item-title" mbr-if="showCardTitle">
+                                            Saepe <br> —
+                                        </h4>
+                                        <h6 class="mbr-desc mbr-fonts-style" mbr-theme-style="display-7"
+                                            data-app-selector=".mbr-desc, .item-title" mbr-if="showDesc">
+                                            Card Subtitle
+                                        </h6>
+                                    </div>
+                                </div>
+                                <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4"
+                                   data-app-selector=".mbr-text">
+                                    Officia perferendis, quibusdam quidem vitae.
+                                </p>
+                                <p class="mbr-loc mbr-fonts-style" mbr-if="showLoc" mbr-theme-style="display-4"
+                                   data-app-selector=".mbr-loc">
+                                    Germany
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-image col-12 col-lg-6">
+                        <div class="item-wrapper">
+                            <a href="#">
+                                <div class="item-img">
+                                    <img src="../_images/advisory/image13.jpg" alt="Mobirise Website Builder">
+                                    <span mbr-icon class="mbr-iconfont mobi-mbri-play mobi-mbri" mbr-if="showIcon"></span>
+                                </div>
+                            </a>
+                            <div class="item-content">
+                                <div class="item-title">
+                                    <div class="item-title-wrap">
+                                        <h4 class="mbr-card-title mbr-fonts-style" mbr-theme-style="display-7"
+                                            data-app-selector=".mbr-card-title, .item-title" mbr-if="showCardTitle">
+                                            Saepe <br> —
+                                        </h4>
+                                        <h6 class="mbr-desc mbr-fonts-style" mbr-theme-style="display-7"
+                                            data-app-selector=".mbr-desc, .item-title" mbr-if="showDesc">
+                                            Card Subtitle
+                                        </h6>
+                                    </div>
+                                </div>
+                                <p class="mbr-text mbr-fonts-style" mbr-if="showText" mbr-theme-style="display-4"
+                                   data-app-selector=".mbr-text">
+                                    Officia perferendis, quibusdam quidem vitae.
+                                </p>
+                                <p class="mbr-loc mbr-fonts-style" mbr-if="showLoc" mbr-theme-style="display-4"
+                                   data-app-selector=".mbr-loc">
+                                    Germany
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div mbr-buttons mbr-theme-style="display-4" class="mbr-section-btn" mbr-if="showButtons">
+                    <a class="btn btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">
+                        <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

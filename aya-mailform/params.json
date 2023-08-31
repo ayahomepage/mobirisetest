@@ -1,0 +1,35 @@
+{
+    "name": "AYA-Mailform v12.2",
+    "alias": "witsec-mailform",
+    "version": 0.1,
+    "minAppVersion": "4.10.17",
+    "ampCompatible": false,
+	"appScript": true,
+	"description":"Easily add independent contact forms to your website. <a href='https://witsec.nl'>Learn more...</a>",
+    "largeCover": "cover.jpg",
+	"logo":"thumbnail.jpg",
+    "components" : [
+		{
+            "path":"components/witsec-mailform",
+            "_group":"witsec",
+            "_isSecondary": true
+        },
+		{
+            "path":"components/witsec-mailform-builder",
+            "_group":"witsec",
+            "_isSecondary": true
+        },
+		{
+            "path":"components/witsec-mailform-newsletter",
+            "_group":"witsec",
+            "_isSecondary": true
+        },
+		{
+            "path":"components/witsec-mailform-m3",
+            "_group":"witsec"
+        }
+   ],
+    "plugins": [
+        "plugins"
+    ]
+}

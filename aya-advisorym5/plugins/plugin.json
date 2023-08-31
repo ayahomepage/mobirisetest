@@ -1,0 +1,246 @@
+[
+    {
+        "name": "Bootstrap",
+        "condition": true,
+        "priority": 2000,
+        "files": [
+            "bootstrap/css/bootstrap.min.css",
+            "bootstrap/css/bootstrap-grid.min.css",
+            "bootstrap/css/bootstrap-reboot.min.css",
+            "bootstrap/js/bootstrap.bundle.min.js"
+        ]
+    },
+    {
+        "name": "Typed",
+        "priority": 2000,
+        "files": [
+            "typed/typed.js"
+        ]
+    },
+    {
+        "name": "aya-mailform",
+        "condition": true,
+        "priority": 3000,
+        "files": [
+            "aya-mailform/mailform.js"
+        ]
+    },
+    {
+        "name": "Socicon",
+        "condition": false,
+        "priority": 3000,
+        "iconfont": {
+            "family": "socicon",
+            "title": "Socicon",
+            "prefix": "socicon-",
+            "names": ["eitaa","soroush","bale","zazzle","society6","redbubble","avvo","stitcher","googlehangouts","dlive","vsco","flipboard","ubuntu","artstation","invision","torial","collectorz","seenthis","googleplaymusic","debian","filmfreeway","gnome","itchio","jamendo","mix","sharepoint","tinder","windguru","cdbaby","elementaryos","stage32","tiktok","gitter","letterboxd","threema","splice","metapop","naver","remote","internet","moddb","indiedb","traxsource","gamefor","pixiv","myanimelist","blackberry","wickr","spip","napster","beatport","hackerone","hackernews","smashwords","kobo","bookbub","mailru","gitlab","instructables","portfolio","codered","origin","nextdoor","udemy","livemaster","crunchbase","homefy","calendly","realtor","tidal","qobuz","natgeo","mastodon","unsplash","homeadvisor","angieslist","codepen","slack","openaigym","logmein","fiverr","gotomeeting","aliexpress","guru","appstore","homes","zoom","alibaba","craigslist","wix","redfin","googlecalendar","shopify","freelancer","seedrs","bing","doodle","bonanza","squarespace","toptal","gust","ask","trulia","loomly","ghost","upwork","fundable","booking","googlemaps","zillow","niconico","toneden","augment","bitbucket","fyuse","yt-gaming","sketchfab","mobcrush","microsoft","pandora","messenger","gamewisp","bloglovin","tunein","gamejolt","trello","spreadshirt","500px","8tracks","airbnb","alliance","amazon","amplement","android","angellist","apple","appnet","baidu","bandcamp","battlenet","mixer","bebee","bebo","behance","blizzard","blogger","buffer","chrome","coderwall","curse","dailymotion","deezer","delicious","deviantart","diablo","digg","discord","disqus","douban","draugiem","dribbble","drupal","ebay","ello","endomodo","envato","etsy","facebook","feedburner","filmweb","firefox","flattr","flickr","formulr","forrst","foursquare","friendfeed","github","goodreads","google","googlescholar","googlegroups","googlephotos","googleplus","grooveshark","hackerrank","hearthstone","hellocoton","heroes","smashcast","horde","houzz","icq","identica","imdb","instagram","issuu","istock","itunes","keybase","lanyrd","lastfm","line","linkedin","livejournal","lyft","macos","mail","medium","meetup","mixcloud","modelmayhem","mumble","myspace","newsvine","nintendo","npm","odnoklassniki","openid","opera","outlook","overwatch","patreon","paypal","periscope","persona","pinterest","play","player","playstation","pocket","qq","quora","raidcall","ravelry","reddit","renren","researchgate","residentadvisor","reverbnation","rss","sharethis","skype","slideshare","smugmug","snapchat","songkick","soundcloud","spotify","stackexchange","stackoverflow","starcraft","stayfriends","steam","storehouse","strava","streamjar","stumbleupon","swarm","teamspeak","teamviewer","technorati","telegram","tripadvisor","tripit","triplej","tumblr","twitch","twitter","uber","ventrilo","viadeo","viber","viewbug","vimeo","vine","vkontakte","warcraft","wechat","weibo","whatsapp","wikipedia","windows","wordpress","wykop","xbox","xing","yahoo","yammer","yandex","yelp","younow","youtube","zapier","zerply","zomato","zynga"],
+            "class": "socicon",
+            "default": "twitter"
+        },
+        "files": [
+            "socicon/css/styles.css",
+            "socicon/fonts/socicon.eot",
+            "socicon/fonts/socicon.svg",
+            "socicon/fonts/socicon.ttf",
+            "socicon/fonts/socicon.woff",
+            "socicon/fonts/socicon.woff2"
+        ]
+    },
+    {
+        "name": "DropDown",
+        "condition": false,
+        "priority": 3000,
+        "files": [
+            "dropdown/css/style.css",
+            "dropdown/js/navbar-dropdown.js"
+        ]
+    },
+    {
+        "name": "AnimateCSS",
+        "condition": ["_theme.isAnimatedOnScroll"],
+        "priority": 3000,
+        "files": [
+            {
+                "src" : "animatecss/animate.css",
+                "publishOnly" : true
+            }
+        ]
+    },
+    {
+        "name": "VimeoPlayer",
+        "condition": ["_params.bg.type=video"],
+        "priority": 3000,
+        "files": [
+            "vimeoplayer/player.js"
+        ]
+    },
+    {
+        "name": "countdown",
+        "priority": 3000,
+        "files": [
+            {
+                "src" : "countdown/countdown.js"
+            }
+        ]
+    },
+    {
+        "name": "SocialLikes",
+        "priority": 3000,
+        "files": [
+            "sociallikes/social-likes.js"
+        ]
+    },
+    {
+        "name": "Parallax",
+        "condition": ["_params.bg.type=image", "_params.bg.parallax"],
+        "priority": 2000,
+        "files": [
+            "parallax/jarallax.js",
+            "parallax/jarallax.css"
+        ]
+    },
+    {
+        "name": "SmoothScroll",
+        "condition": true,
+        "priority": 3000,
+        "files": [
+            "smoothscroll/smooth-scroll.js"
+        ]
+    },
+    {
+        "name": "mobirise-icons2",
+        "condition": [
+            "_params.gallery"
+        ]
+    },
+    {
+        "name": "Theme",
+        "condition": true,
+        "priority": 5000,
+        "files": [
+            "theme/css/style.css",
+            "theme/js/script.js"
+        ]
+    },
+    {
+        "name": "Formoid",
+        "condition": ["_params.formoidUserID"],
+        "priority": 6000,
+        "files": [
+            "formoid/formoid.min.js"
+        ]
+    },
+    {
+        "name": "mbr-clients-slider",
+        "priority": 3000,
+        "files": [
+            "mbr-clients-slider/mbr-clients-slider.js"
+        ]
+    },
+    {
+        "name": "mbr-tabs",
+        "condition": "_params.showTabs",
+        "priority": 3000,
+        "files": [
+            "mbr-tabs/mbr-tabs.js"
+        ]
+    },
+    {
+        "name": "mbr-popup-btns",
+        "priority": 3000,
+        "files": [
+            "mbr-popup-btns/mbr-popup-btns.js"
+        ]
+    },
+    {
+        "name": "mbr-switch-arrow",
+        "priority": 3000,
+        "files": [
+            "mbr-switch-arrow/mbr-switch-arrow.js"
+        ]
+    },
+    {
+        "name": "mobirise-shop",
+        "priority": 3000,
+        "files": [
+            "mobirise-shop/script.js"
+        ]
+    },
+    {
+        "name": "Gallery",
+        "priority": 6000,
+        "files": [
+            "gallery/player.min.js",
+            "gallery/script.js",
+            "gallery/style.css"
+        ]
+    },
+    {
+        "name": "SliderVideo",
+        "priority": 6000,
+        "files": [
+            "slidervideo/script.js"
+        ]
+    },
+    {
+        "name": "Masonry",
+        "priority": 3000,
+        "files": [
+            {
+                "name": "Masonry",
+                "src": "masonry/masonry.pkgd.min.js"
+            },
+            {
+                "name": "imagesloaded",
+                "src": "imagesloaded/imagesloaded.pkgd.min.js"
+            }
+        ]
+    },
+    {
+        "name": "PlayerVimeo",
+        "condition": false,
+        "priority": 3000,
+        "files": [
+            "playervimeo/vimeo_player.js"
+        ]
+    },
+    {
+        "name":"dataTables",
+        "priority":3000,
+        "files":[
+            "datatables/vanilla-dataTables.min.css",
+            "datatables/vanilla-dataTables.min.js"
+        ]
+    },
+    {
+        "name": "YTPlayer",
+        "condition": true,
+        "priority": 3000,
+        "files": [
+            "ytplayer/index.js"
+        ]
+    },
+    {
+        "name": "as-pie-progress",
+        "priority": 3000,
+        "files": [
+            "as-pie-progress/css/progress.min.css",
+            "as-pie-progress/as-pie-progress.min.js"
+        ]
+    },
+    {
+        "name": "embla",
+        "priority": 3000,
+        "files": [
+            "embla/embla.min.js",
+            "embla/script.js"
+        ]
+    },
+    {
+        "name": "viewportchecker",
+        "priority": 3000,
+        "files": [
+            "viewportchecker/viewportchecker.js"
+        ]
+    }
+]

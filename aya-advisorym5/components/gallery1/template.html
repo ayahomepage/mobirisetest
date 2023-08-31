@@ -1,0 +1,57 @@
+<section class="gallery1 advisorym5" group="Gallery & Slider"  mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}">
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Border" name="showBorder" checked>
+        <input type="color" title="Border Color" value="#d7d7d7" name="border" condition="showBorder" selected>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#000000"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 card">
+                <div class="decor-wrap">
+                    <div class="decor-circle_1">
+                        <img src="../_images/advisory/image1.jpg" alt="Mobirise">
+                    </div>
+                    <div class="decor-circle_2">
+                        <img src="../_images/advisory/image3.jpg" alt="Mobirise">
+                    </div>
+                    <div class="decor-circle_3">
+                        <img src="../_images/advisory/image14.jpg" alt="Mobirise">
+                    </div>
+                    <div class="decor-square_1">
+                        <img src="../_images/advisory/image8.jpg" alt="Mobirise">
+                    </div>
+                    <div class="decor-square_2">
+                        <img src="../_images/advisory/image12.jpg" alt="Mobirise">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

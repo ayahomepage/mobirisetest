@@ -1,0 +1,88 @@
+<section class="footer1 advisorym5" group="Footers" mbr-class="{'mbr-fullscreen': fullScreen,
+                    'mbr-parallax-background': bg.parallax}" global once="footers">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" title="Full Screen" name="fullScreen">
+        <input type="checkbox" title="Full Width" name="fullWidth" checked>
+        <input type="range" inline title="Top" name="paddingTop" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="range" inline title="Bottom" name="paddingBottom" min="0" max="10" step="1" value="5"
+               condition="fullScreen == false">
+        <input type="checkbox" title="Reverse" name="reverseContent">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Logo" name="showLogo" checked>
+        <input type="checkbox" title="List 1" name="showList_1" checked>
+        <input type="checkbox" title="List 2" name="showList_2" checked>
+        <input type="checkbox" title="Text" name="showText" checked>
+        <input type="checkbox" title="Copyright" name="showCopy" checked>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" condition="bg.type !== 'color'" checked>
+        <input type="color" title="Overlay Color" name="overlayColor" value="#ffffff"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.7"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row" mbr-class="{'flex-row-reverse' : reverseContent}">
+            <div class="col-12 col-lg-5 card">
+                <div class="list-wrapper">
+                    <ul class="list mbr-fonts-style" mbr-theme-style="display-4"
+                        data-app-selector=".list, .list-wrapper" data-multiline mbr-article mbr-if="showList_1">
+                        <li class="item-wrap">Home</li>
+                        <li class="item-wrap">Projects</li>
+                        <li class="item-wrap">About Us</li>
+                        <li class="item-wrap">Contacts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-2 card">
+                <div class="logo-wrap" mbr-if="showLogo">
+                    <img src="../_images/logo.png" alt="Mobirise">
+                </div>
+                <h4 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-7" mbr-if="showTitle"
+                   data-app-selector=".mbr-section-title, .logo-wrap">
+                    AdvisoryM5 Theme
+                </h4>
+            </div>
+            <div class="col-12 col-lg-5 card">
+                <div class="list-wrapper_2">
+                    <ul class="list_2 mbr-fonts-style" mbr-theme-style="display-4"
+                        data-app-selector=".list_2, .list-wrapper_2" data-multiline mbr-article mbr-if="showList_2">
+                        <li class="item-wrap">Company</li>
+                        <li class="item-wrap">Privacy Policy</li>
+                        <li class="item-wrap">Cookies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="text-wrapper" mbr-if="showText">
+                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-4"
+                       data-app-selector=".mbr-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ea eius, eligendi.
+                    </p>
+                </div>
+                <div class="copy-wrapper">
+                    <p class="copyright mbr-fonts-style" mbr-theme-style="display-4" mbr-if="showCopy"
+                       data-app-selector=".copyright">
+                        © Copyright 2030 Mobirise - All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

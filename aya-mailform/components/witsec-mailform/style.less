@@ -1,0 +1,125 @@
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+
+& when (@bg-type = 'color') {
+  background-color: @bg-value;
+}
+
+& when (@bg-type = 'image') {
+  background-image: url(@bg-value);
+}
+
+.showAlerts {
+  display: block !important;
+}
+
+.rowflexrev {
+  display: -webkit-flex;
+}
+
+& when (@confirmationBelow) {
+
+  .ws-form-alerts {
+    margin-top: 1rem;
+  }
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.mbr-section-subtitle {
+  color: #767676;
+}
+
+textarea.form-control {
+  min-height: 188px;
+}
+
+LABEL {
+  color: #232323;
+  display: initial;
+}
+
+.mbr-section-terms {
+  text-align: center;
+  color: #232323;
+  margin-bottom: 0px;
+}
+
+.mbr-section-labels {
+  color: #232323;
+  padding: 0;
+  margin-bottom: .357em;
+  text-align: left;
+}
+
+.mbr-section-autorespond {
+  text-align: left;
+  color: #232323;
+  margin-bottom: 0px;
+}
+
+.mbr-section-gdpr {
+  text-align: left;
+  color: #232323;
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+.alert-success {
+  background-color: @bgColorSuccess;
+}
+
+.alert-danger {
+  background-color: @bgColorError;
+}
+
+.btn {
+  display: inline-flex;
+}
+
+.mbr-alert-success {
+  text-align: left;
+  color: #ffffff;
+}
+
+.mbr-alert-danger {
+  text-align: left;
+  color: #ffffff;
+}
+
+.uploadBtn {
+  padding-top: unit(@uploadBtnPaddingY, px) !important;
+  padding-left: unit(@uploadBtnPaddingX, px) !important;
+}
+
+input[type=file]::file-selector-button {
+  border: (@uploadBtnBdrWidth * 1px) solid @uploadBtnBdrColor !important;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: @uploadBtnBgColor !important;
+  color: @uploadBtnTxtColor !important;
+  transition: 0.3s;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  border: (@uploadBtnBdrWidth * 1px) solid @uploadBtnBdrColor !important;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: @uploadBtnBgColor !important;
+  color: @uploadBtnTxtColor !important;
+  transition: 0.3s;
+}
+
+input[type=file]::-ms-browse {
+  border: (@uploadBtnBdrWidth * 1px) solid @uploadBtnBdrColor !important;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: @uploadBtnBgColor !important;
+  color: @uploadBtnTxtColor !important;
+  transition: 0.3s;
+}

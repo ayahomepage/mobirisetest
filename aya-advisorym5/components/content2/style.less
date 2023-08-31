@@ -1,0 +1,162 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& {
+    overflow: hidden;
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+    display: none;
+}
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 16px;
+
+        @media (max-width: 992px) {
+            padding: 0 12px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    & when (@showBorder) {
+        border-top: 2px solid @border;
+        border-bottom: 2px solid @border;
+        margin-top: -2px;
+    }
+}
+
+.card {
+    padding: 0;
+
+    &:first-child {
+        .image-wrap {
+            min-height: 600px;
+            display: flex;
+            align-items: flex-end;
+
+            & when (@showBorder) {
+                border-right: 2px solid @border;
+
+                & when (@reverseContent) {
+                    border-right: 0;
+                    border-left: 2px solid @border;
+                }
+            }
+
+            @media (max-width: 992px) {
+                min-height: 250px;
+            }
+
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-top-left-radius: 100%;
+
+                & when (@showBorder) {
+                    border: 2px solid @border;
+                    border-right: 0;
+                    border-bottom: 0;
+
+                    & when (@reverseContent) {
+                        border-right: 0;
+                        border-left: 2px solid @border;
+                    }
+                }
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        .image-wrap {
+            height: 100%;
+
+            & when (@showBorder) {
+                border-right: 2px solid @border;
+
+                & when (@reverseContent) {
+                    border-right: 0;
+                    border-left: 2px solid @border;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+
+                & when (@showBorder) {
+                    border-bottom: 2px solid @border;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        padding: 0 100px;
+        justify-content: center;
+
+        @media (max-width: 992px) {
+            padding: 50px 20px;
+        }
+    }
+}
+
+.text-wrapper {
+    .mbr-section-title {
+        margin-bottom: 32px;
+    }
+
+    .mbr-text {
+        margin-bottom: 64px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.mbr-text {
+    color: #1d1d1d;
+}
+
+
+
+

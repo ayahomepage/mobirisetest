@@ -1,0 +1,135 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    justify-content: center;
+}
+
+.title-wrapper {
+    .mbr-section-title {
+        margin-bottom: 64px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    border: 2px solid @border;
+
+    @media (max-width: 992px) {
+        margin-bottom: 50px;
+    }
+
+    .card-wrap {
+        .mbr-card-title {
+            margin-bottom: 32px;
+        }
+
+        .mbr-price {
+            margin-bottom: 32px;
+        }
+
+        .list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            .item-wrap {
+                padding: 16px 0;
+                border-bottom: 1px solid @border;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    .mbr-section-btn {
+        margin-top: 48px;
+
+        @media (max-width: 992px) {
+            margin-top: 34px;
+        }
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.mbr-card-title {
+    color: #1d1d1d;
+}
+
+.mbr-card-title, .mbr-section-btn {
+    text-align: center;
+}
+
+.mbr-price {
+    color: #1d1d1d;
+    text-align: center;
+}
+
+.list, .list-wrap {
+    color: #1d1d1d;
+    text-align: center;
+}
+
+
+
+

@@ -1,0 +1,135 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& {
+    overflow: hidden;
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+    display: none;
+}
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 16px;
+
+        @media (max-width: 992px) {
+            padding: 0 12px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    & when (@showBorder) {
+        border-top: 2px solid @border;
+        border-bottom: 2px solid @border;
+        margin-top: -2px;
+    }
+}
+
+.card {
+    padding: 0;
+    border-radius: 0;
+
+    &:first-child {
+
+        & when (@showBorder) {
+            border-right: 2px solid @border;
+
+            & when (@reverseContent) {
+                border-right: none;
+                border-left: 2px solid @border;
+            }
+        }
+
+        .title-wrapper {
+            padding: 64px;
+
+            & when (@showBorder) {
+                border-bottom: 2px solid @border;
+            }
+
+            @media (max-width: 992px) {
+                padding: 50px 20px;
+            }
+
+            .mbr-section-title {
+                margin-bottom: 0;
+            }
+        }
+
+        .image-wrap {
+            height: 350px;
+
+            @media (max-width: 992px) {
+                height: 250px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-top-right-radius: 100%;
+            }
+        }
+    }
+
+    &:last-child {
+        padding: 64px 100px;
+        justify-content: center;
+
+        @media (max-width: 992px) {
+            padding: 50px 20px;
+        }
+    }
+}
+
+.text-wrapper {
+    .mbr-text {
+        margin-bottom: 0;
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+    text-align: center;
+}
+
+.mbr-text {
+    color: #1d1d1d;
+}
+
+
+
+

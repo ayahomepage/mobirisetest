@@ -1,0 +1,142 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.list-wrapper .list, .list-wrapper_2 .list_2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    .item-wrap {
+        margin-right: 24px;
+        transition: all .3s ease-out;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        @media (max-width: 992px) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.logo-wrap {
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: inline-flex;
+        margin-bottom: 8px;
+    }
+}
+
+.mbr-section-title {
+    margin-bottom: 0;
+
+    @media (max-width: 992px) {
+        margin-bottom: 32px;
+    }
+}
+
+.text-wrapper {
+    margin: 40px 0 22px;
+
+    .mbr-text {
+        margin-bottom: 0;
+    }
+}
+
+.copy-wrapper {
+    .copyright {
+        margin-bottom: 0;
+    }
+}
+
+.mbr-section-title {
+    color: #1d1d1d;
+}
+
+.mbr-section-title, .logo-wrap {
+    text-align: center;
+}
+
+.list {
+    color: #1d1d1d;
+}
+
+.list_2 {
+    color: #989898;
+}
+
+.mbr-text {
+    color: #989898;
+    text-align: center;
+}
+
+.copyright {
+    color: #d7d7d7;
+    text-align: center;
+}
+
+.list-wrapper_2 {
+    text-align: right;
+}
+
+.list-wrapper, .list-wrapper_2 {
+    @media (max-width: 992px) {
+        text-align: center;
+    }
+}
+
+
+

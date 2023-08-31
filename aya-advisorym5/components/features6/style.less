@@ -1,0 +1,121 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    justify-content: center;
+}
+
+.item {
+    margin-bottom: 64px;
+
+    @media (max-width: 992px) {
+        margin-bottom: 50px;
+    }
+
+    .item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .item-img {
+            padding-bottom: 32px;
+            margin-bottom: 32px;
+
+            & when (@showBorder) {
+                border-bottom: 2px solid @border;
+            }
+
+            img {
+                width: 210px;
+                height: 210px;
+                border-radius: 100%;
+                object-fit: cover;
+                display: inline-flex;
+
+                & when (@showBorder) {
+                    border: 2px solid @border;
+                }
+            }
+        }
+
+        .item-content {
+            .title-wrapper {
+                height: 100%;
+
+                .mbr-card-title {
+                    margin-bottom: 32px;
+                }
+
+                .mbr-text {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}
+
+
+.mbr-card-title {
+    color: #1d1d1d;
+}
+
+.mbr-card-title, .item-img {
+    text-align: center;
+}
+
+.mbr-text {
+    color: #1d1d1d;
+    text-align: center;
+}
+
+
+
+

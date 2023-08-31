@@ -1,0 +1,207 @@
+<section class="slider2 mbr-embla advisorym5" group="Sliders & Galleries"
+         mbr-class="{'mbr-parallax-background':bg.parallax}" plugins="embla">
+
+    <mbr-parameters>
+        <header>Size</header>
+        <input type="checkbox" name="fullWidth" title="Full Width" checked>
+        <input inline type="range" title="Top" name="paddingTop" min="0" max="8" step="1" value="5">
+        <input inline type="range" title="Bottom" name="paddingBottom" min="0" max="8" step="1" value="5">
+        <header>Show/Hide</header>
+        <input type="checkbox" title="Title" name="showTitle" checked>
+        <input type="checkbox" title="Subtitle" name="showSubtitle" checked>
+        <input type="color" title="Line Color" value="#1d1d1d" name="line" condition="showSubtitle" selected>
+        <header>Carousel</header>
+        <input type="checkbox" title="Autoplay" name="autoplay">
+        <input type="range" title="Interval" name="interval" min="1" max="10" value="5" step="1" condition="autoplay">
+        <input type="checkbox" title="Loop" name="loop">
+        <input type="checkbox" title="Draggable" name="draggable" checked="">
+        <input type="checkbox" name="arrows" title="Arrows">
+        <input type="checkbox" name="arrowsMobile" title="Mobile Arrows" condition="arrows">
+        <header>Card</header>
+        <input type="range" name="gap" title="Gap" min="0" max="10" step="1" value="1">
+        <input type="color" title="Border Color" value="#d7d7d7" name="border" selected>
+        <header>Background</header>
+        <fieldset type="background" name="bg" parallax>
+            <input type="image" title="Image" value="../_images/background1.jpg" parallax>
+            <input type="color" title="Color" value="#FCFBF5" selected>
+        </fieldset>
+        <header condition="bg.type === 'video'">Fallback Image</header>
+        <input type="image" title="Fallback Image" value="../_images/background1.jpg" name="fallBackImage"
+               condition="bg.type === 'video'">
+        <input type="checkbox" title="Overlay" name="overlay" checked condition="bg.type !== 'color'">
+        <input type="color" title="Overlay Color" name="overlayColor" value="#000000"
+               condition="overlay && bg.type !== 'color'">
+        <input type="range" inline title="Opacity" name="overlayOpacity" min="0" max="1" step="0.1" value="0.5"
+               condition="overlay && bg.type !== 'color'">
+    </mbr-parameters>
+
+    <div class="mbr-fallback-image disabled" mbr-if="bg.type == 'video'"></div>
+    <div class="mbr-overlay" mbr-if="overlay && bg.type!== 'color'"
+         mbr-style="{'opacity': overlayOpacity, 'background-color': overlayColor}">
+    </div>
+    <div mbr-class="{'container': !fullWidth, 'container-fluid': fullWidth}">
+        <div class="row">
+            <div class="col-12 card">
+                <div class="title-wrapper">
+                    <h2 class="mbr-section-title mbr-fonts-style" mbr-theme-style="display-2"
+                        mbr-if="showTitle" data-app-selector=".mbr-section-title">
+                        Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit, beatae illum elit <br>
+                        libero, necessitatibus nulla rerum <br> obcaecati officia officiis.
+                    </h2>
+                    <h3 class="mbr-section-subtitle mbr-fonts-style" mbr-theme-style="display-7"
+                        mbr-if="showSubtitle" data-app-selector=".mbr-section-subtitle">
+                        Labore
+                    </h3>
+                </div>
+            </div>
+            <div class="embla" data-loop={{loop}} data-auto-play={{autoplay}} data-auto-play-interval={{interval}}
+                 data-draggable={{draggable}} data-skip-snaps="true" data-align="center"
+                 data-contain-scroll="trimSnaps">
+                <div class="embla__viewport">
+                    <div class="embla__container">
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Lorem ipsum dolor sit amet
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Dolorum earum esse eveniet fuga
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Pariatur quasi quia vero
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Nemo neque optio pariatur
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Et illo inventore officia
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Minus modi odit omnis perferendis
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Nihil, officiis omnis quidem
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Quos reprend sint dolorum magni.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Facere illo labor mollitia
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Enim eum expedita iste libero
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Ratione sunt tempora tenetur
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide slider-image item"
+                             mbr-style="{'margin-left': gap + 'rem', 'margin-right': gap + 'rem'}">
+                            <div class="card-wrap">
+                                <div class="content-wrap">
+                                    <p class="mbr-text mbr-fonts-style" mbr-theme-style="display-7"
+                                       data-app-selector=".mbr-text">
+                                        Error minima nam sint
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="embla__button embla__button--prev">
+                    <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
+                    <span class="sr-only visually-hidden">Previous</span>
+                </button>
+                <button class="embla__button embla__button--next">
+                    <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
+                    <span class="sr-only visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

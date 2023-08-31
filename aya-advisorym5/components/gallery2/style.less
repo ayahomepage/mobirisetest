@@ -1,0 +1,118 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+
+.mbr-fallback-image.disabled {
+    display: none;
+}
+
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 16px;
+
+        @media (max-width: 992px) {
+            padding: 0 12px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.card {
+    padding: 0;
+}
+
+.image-wrapper {
+    position: relative;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .text-wrapper {
+        position: relative;
+        padding: 0 64px;
+
+        @media (max-width: 768px) {
+            padding: 50px 20px;
+        }
+
+        .mbr-section-title {
+            margin-bottom: 32px;
+        }
+
+        .mbr-text {
+            margin-bottom: 64px;
+        }
+
+        .mbr-section-btn {
+            .btn {
+                color: @primaryColor !important;
+            }
+        }
+    }
+}
+
+.image-wrap {
+    position: relative;
+    height: 100%;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.mbr-section-title {
+    color: #ffffff;
+}
+
+.mbr-text {
+    color: #ffffff;
+}
+
+
+

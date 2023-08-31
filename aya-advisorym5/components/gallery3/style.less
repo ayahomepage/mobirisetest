@@ -1,0 +1,113 @@
+& when not (@fullScreen) {
+    padding-top: (@paddingTop * 1rem);
+    padding-bottom: (@paddingBottom * 1rem);
+}
+
+& when (@bg-type ='color') {
+    background-color: @bg-value;
+}
+
+& when (@bg-type ='image') {
+    background-image: url(@bg-value);
+}
+.mbr-fallback-image.disabled {
+    display: none;
+}
+.mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & when (@bg-type ='video') {
+        background-image: url(@fallBackImage);
+    }
+}
+
+& when (@fullWidth) {
+    .container-fluid {
+        padding: 0 64px;
+
+        @media (max-width: 992px) {
+            padding: 0 20px;
+        }
+
+        .row {
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    @media (max-width: 992px) {
+        padding: 0 20px;
+    }
+}
+
+.row {
+    justify-content: center;
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media (max-width: 992px) {
+        margin-bottom: 32px;
+    }
+
+    img {
+        height: 500px;
+        border-bottom-right-radius: 100%;
+        object-fit: cover;
+
+        @media (max-width: 768px) {
+            height: 300px;
+        }
+    }
+}
+
+.card {
+    &:nth-child(2) {
+        .image-wrapper {
+            img {
+                height: 450px;
+
+                @media (max-width: 768px) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        .image-wrapper {
+            img {
+                height: 400px;
+
+                @media (max-width: 768px) {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        .image-wrapper {
+            img {
+                height: 350px;
+
+                @media (max-width: 768px) {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+
+
